@@ -11,19 +11,19 @@ Calculating a heat map is a complex task, because since the user selects a more 
 
 If we encounter during the process a square that does not intersect at all with the coordinates, we will stop its division. Now, we will save all the squares we calculated with intersection count bigger than zero. Now we got a heat map with the required resolution! As can be seen, the runtime of the calculation using the recursive algorithm is significantly lower than the naive algorithm:
 
-![]()
+![runtime](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/compare.png)
 
 The resolution of the heat map can be adjusted using the **"depth"** variable. This variable determines how many splits to make in each of the first squares. The larger the "depth" variable, the higher the resolution we get. You can see a diagram describing the split into squares, by each depth:
 
-![]()
+![square size](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/squares.png)
 
 As mentioned, it is important to make sure that a suitable resolution is chosen for the calculation, since different values for the "depth" variable will lead to different results. A simple example based on the file []() illustrates how different values resulted different outputs:
 
-![]()
+![six_plots](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/diff_depth.png)
 
 The heat map is calculation performed using the **HeatMap** object. This object receives a Python list consisting of tuples of X and Y coordinates. Also, the desired depth also must be set for the object. Using the data about the coordinates, the HeatMap calculates the initial squares and performs the recursive calculation on them. At the end of the process, the squares that compose the heat map are calculated, as can be seen in the example process figure:
 
-![]()
+![input output](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/process.png)
 
 The final squares can be accessed as one of the data of the object: **HeatMap (xy_tpl_lst, depth = 5) .heatmap**. It is also possible to **create a plot** based on the results of the heat map using the function built into the object, as in the following example:
 ``` sh
@@ -32,24 +32,14 @@ xy = loadcsv(r'example\circle.csv','x','y')
 hm = HeatMap(xy, depth=4)
 hm.plot()
 ```
-![]()
+![hm.plot() example](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/HeatMap_Output_depth%3D4_number_of_points%3D5000.png)
 
-In addition, the calculation results can be exported and saved as files in various formats using the **save_map** function of the object, as can be seen in the file [](). The function allows to save the results in **SHP**, **KML** and **CSV** format. It should be noted that saving the results as layers is automatically set to  geographic coordinate system of **WGS_1984_DD**. Also, the data that saved to a KML file gets a color corresponding to the count of its intersection.
+In addition, the calculation results can be exported and saved as files in various formats using the **save_map** function of the object, as can be seen in the [**implementation.py**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/implementation.py) file. The function allows to save the results in **SHP**, **KML** and **CSV** format. It should be noted that saving the results as layers is automatically set to  geographic coordinate system of **WGS_1984_DD**. Also, the data that saved to a KML file gets a color corresponding to the count of its intersection.
 Also, for convenience, the code contains three XY-tuple-list load functions from **SHP**, **KML** and **CSV** files. 
 - loadshp
 - loadkml
 - loadcsv    (this function required also the X & Y fields names)
 
-
-![plot() example](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/HeatMap_Output_depth%3D4_number_of_points%3D5000.png)
-
-![runtime](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/compare.png)
-
-![six_plots](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/diff_depth.png)
-
-![input output](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/process.png)
-
-![square size](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/squares.png)
 
 ## libraries
 The code uses the following libraries in Python:
@@ -67,7 +57,7 @@ The code uses the following libraries in Python:
 ## application
 An application of the code is attached to this page under the name: 
 
-**"implementation.py"** 
+[**implementation.py**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/implementation.py)
 the examples outputs are also attached here.
 
 ## example for using the code
