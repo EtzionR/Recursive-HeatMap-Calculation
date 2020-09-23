@@ -34,11 +34,12 @@ hm.plot()
 ```
 ![hm.plot() example](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/HeatMap_Output_depth%3D4_number_of_points%3D5000.png)
 
-In addition, the calculation results can be exported and saved as files in various formats using the **save_map** function of the object, as can be seen in the [**implementation.py**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/implementation.py) file. The function allows to save the results in **SHP**, **KML** and **CSV** format. It should be noted that saving the results as layers is automatically set to  geographic coordinate system of **WGS_1984_DD**. Also, the data that saved to a KML file gets a color corresponding to the count of its intersection.
-Also, for convenience, the code contains three XY-tuple-list load functions from **SHP**, **KML** and **CSV** files. 
-- loadshp
-- loadkml
-- loadcsv    (this function required also the X & Y fields names)
+In addition, the calculation results can be exported and saved as files in various formats using the **save_map** function of the object, as can be seen in the [**implementation.py**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/implementation.py) file. The function allows to save the results in **SHP**, **KML** and **CSV** format. It should be noted that saving the results as layers is automatically set to  geographic coordinate system of **WGS_1984_DD**. 
+
+Also, the data that saved to a KML file gets a color corresponding to the count of its intersection. Example for such output you can see [**here**](https://www.google.com/maps/d/edit?mid=1VJ0SwJSOOVDwZDDhKAilDdkR0XbxY3rM&usp=sharing). This output based on the [**Gibraltar.kml**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/examples/Gibraltar.kml) file and also available here: [**Gibraltar_Output.kml**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/output/Gibraltar_Output.kml). Also, for convenience, the code contains three XY-tuple-list load functions from **SHP**, **KML** and **CSV** files. 
+- **loadshp**
+- **loadkml**
+- **loadcsv**    (this function required also the X & Y fields names)
 
 
 ## libraries
