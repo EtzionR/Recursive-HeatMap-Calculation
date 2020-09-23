@@ -6,7 +6,7 @@ import shapefile as shp
 import pandas as pd
 import numpy as np
 
-COL = ['ff006100','ff00803c','ff00a16b','ff00c4a4','ff00ebdf','ff00eaff','ff00bbff','ff0091ff','ff0062ff','ff0022ff']
+COL = ['b3006100','b300803c','b300a16b','b300c4a4','b300ebdf','b300eaff','b300bbff','b30091ff','b30062ff','b30022ff']
 
 PRJ = 'GEOGCS["GCS_WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],' \
       'PRIMEM["Greenwich",0.0],UNIT["Degree",0.0174532925199433]],VERTCS["EGM96_Geoid",' \
