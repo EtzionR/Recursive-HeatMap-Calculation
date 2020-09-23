@@ -9,7 +9,7 @@ hm.save_map(r'output\Rome_100000') # shp
 # example 2
 xy = loadkml(r'examples\Gibraltar.kml')
 hm = HeatMap(xy, depth=3)
-hm.save_map(r'output\Gibraltar','kml')
+hm.save_map(r'output\Gibraltar_Output','kml')
 
 # example 3
 xy = loadcsv(r'examples\circle.csv','x','y')
