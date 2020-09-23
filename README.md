@@ -21,7 +21,7 @@ As mentioned, it is important to make sure that a suitable resolution is chosen 
 
 ![six_plots](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/diff_depth.png)
 
-The heat map is calculation performed using the **HeatMap** object. This object receives a Python list consisting of tuples of X and Y coordinates. Also, the desired depth also must be set for the object. Using the data about the coordinates, the HeatMap calculates the initial squares and performs the recursive calculation on them. At the end of the process, the squares that compose the heat map are calculated, as can be seen in the example process figure:
+The heat map is calculation performed using the **HeatMap** object. This object receives a Python list consisting of tuples of X and Y coordinates. Also, the desired depth also must be set for the object. Using the data about the coordinates, the HeatMap calculates the initial squares and performs the recursive calculation on them. At the end of the process, the squares that compose the heat map are calculated, as can be seen in the example process figure (based on the file [**rome_100000.shp**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/examples/rome_100000.shp) that contain **100,000** points coordinates!):
 
 ![input output](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/process.png)
 
@@ -64,26 +64,26 @@ the examples outputs are also attached here.
 To use this code, you just need to import it as follows:
 ``` sh
 # import
-from sector_creator import create_sector_kml
-import pandas as pd
+from smart_heatmap import HeatMap, loadshp
 
-# define variables
-data = pd.read_csv(r'path\file.csv')
-name = 'name'
-x_field = 'x'
-y_field = 'y'
-angle = 'angle'
-distance = 'distance'
-std = 'sd'
+# load data
+xy = loadshp(r'examples\feature_class.shp')
+
+# define depth variable
+depth = 5
 
 # application
-create_sector_kml(data,x_field,y_field,angle,distance,std,name='name', points=50,output='POLYGONS_FILE')
+hm = HeatMap(xy, depth)
+
+# plot
+hm.plot()
+
+# save data as csv
+hm.save_map('filename','csv')
 ```
 
 When the variables displayed are:
 
-**data:** the given pandas dataframe
+**xy:** the given xy coordiantes list.
 
-**x_field:** x coordiantes field name
-
-**y_field:** y coordiantes field name
+**depth** the required depth for the recursion, define the output resolution.
