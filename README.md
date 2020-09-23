@@ -17,7 +17,7 @@ The resolution of the heat map can be adjusted using the **"depth"** variable. T
 
 ![square size](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/squares.png)
 
-As mentioned, it is important to make sure that a suitable resolution is chosen for the calculation, since different values for the "depth" variable will lead to different results. A simple example based on the file []() illustrates how different values resulted different outputs:
+As mentioned, it is important to make sure that a suitable resolution is chosen for the calculation, since different values for the "depth" variable will lead to different results. A simple example based on the file [**circle.csv**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/examples/circle.csv) illustrates how different values resulted different outputs:
 
 ![six_plots](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/diff_depth.png)
 
