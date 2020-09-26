@@ -189,9 +189,7 @@ class HeatMap:
         counts = [s.count**0.5 for s in self.heatmap]
         c_min, c_max = min(counts), max(counts)
         divisor= (c_max-c_min)/9
-        lst = []
         for s in self.heatmap:
-            lst.append(((s.count**0.5)-c_min)//divisor)
             single = file.newpolygon(name=str(s.count),
                                      outerboundaryis=s.get_coordinates())
             single.style.polystyle.color = COL[int(((s.count**0.5)-c_min)//divisor)]
