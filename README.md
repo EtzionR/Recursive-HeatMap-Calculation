@@ -89,3 +89,7 @@ When the variables displayed are:
 **xy:** the given xy coordiantes list.
 
 **depth** the required depth for the recursion, define the output resolution.
+
+
+# License
+MIT © [Etzion Harari](https://github.com/EtzionData)
