@@ -91,5 +91,5 @@ When the variables displayed are:
 **depth** the required depth for the recursion, define the output resolution.
 
 
-# License
+## License
 MIT © [Etzion Harari](https://github.com/EtzionData)
