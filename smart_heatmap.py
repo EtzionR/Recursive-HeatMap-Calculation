@@ -150,11 +150,12 @@ class HeatMap:
         else:
             return col, row
 
-    def plot(self):
+    def plot(self,size=6):
         """
         plot the heatmap results
         """
-        fig, ax = plt.subplots(1, 1, figsize=(6.5, 5))
+        fig, ax = plt.subplots(1, 1, figsize=((self.col / max(self.col, self.row)) * size,
+                                              (self.row / max(self.col, self.row)) * size))
         fig.suptitle(f'HeatMap Output\n(depth={self.depth}, number of points={len(self.xy)})')
         p = PatchCollection([Polygon(s.get_coordinates(), True) for s in self.heatmap], cmap='autumn')
         p.set_array(np.array([s.count for s in self.heatmap]))
