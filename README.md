@@ -1,5 +1,5 @@
 # recursive-HeatMap-calculation
-fast calculation of heatmap from given points.
+recursive method for heatmap calculation from given points.
 
 ## introduction
 Calculating a heat map is a complex task, because since the user selects a more detailed resolution, the runtime of the calculation increases accordingly. The main difficulty in the calculation is in the sum of all the coordinates for the boundaries of each cell in the heat map. To overcome this problem, the code [**smart_heatmap.py**]( https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/smart_heatmap.py) applied **recursive solution**:
