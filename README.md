@@ -27,7 +27,7 @@ The heat map calculation performed using the **HeatMap** object. This object rec
 
 ![input output](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/process.png)
 
-The final squares can be accessed as one of the data of the object: **HeatMap (xy_tpl_lst, depth = 5).heatmap**. It is also possible to **create a plot** based on the results of the heat map using the function built into the object, as in the following example:
+The final squares can be accessed as one of the data of the object: **HeatMap(xy_tpl_lst, depth = 5).heatmap**. It is also possible to **create a plot** based on the results of the heat map using the function built into the object, as in the following example:
 ``` sh
 from smart_heatmap import HeatMap, loadcsv 
 xy = loadcsv(r'example\circle.csv','x','y')
