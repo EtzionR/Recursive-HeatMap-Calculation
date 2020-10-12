@@ -13,6 +13,8 @@ If we encounter during the process a square that does not intersect at all with 
 
 ![runtime](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/compare.png)
 
+**Note:** There is a method with even faster runtimes, in one of my other projects: (**cumulative-heatmap-calculation**)[https://github.com/EtzionData/cumulative-heatmap-calculation]
+
 The resolution of the heat map can be adjusted using the **"depth"** variable. This variable determines how many splits to make in each of the first squares. The larger the "depth" variable, the higher the resolution we get. You can see a diagram describing the split into squares, by each depth:
 
 ![square size](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/squares.png)
