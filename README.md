@@ -4,6 +4,8 @@ recursive method for heatmap calculation from given points.
 ## introduction
 Calculating a heat map is a complex task, because since the user selects a more detailed resolution, the runtime of the calculation increases accordingly. The main difficulty in the calculation is in the sum of all the coordinates for the boundaries of each cell in the heat map. To overcome this problem, the code [**smart_heatmap.py**]( https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/smart_heatmap.py) applied **recursive solution**:
 
+**Note:** In one of my other projects, there is a method with even faster runtimes: [**cumulative-heatmap-calculation**](https://github.com/EtzionData/cumulative-heatmap-calculation)
+
 -	**Step One:** Initialize a small amount of low-resolution square cells.
 -	**Step Two:** For each of the squares we will isolate only the coordinates that within to its boundaries and sum them.
 -	**Step Three:** Now, split each square into four small squares in equal size. We will perform **Step Two** for each of these new squares, but now it will only be performed on the coordinates that matched the boundaries of the original square.
@@ -12,8 +14,6 @@ Calculating a heat map is a complex task, because since the user selects a more 
 If we encounter during the process a square that does not intersect at all with the coordinates, we will stop its division. Now, we will save all the squares we calculated with intersection count bigger than zero. Now we got a heat map with the required resolution! As can be seen, the runtime of the calculation using the recursive algorithm is significantly lower than the naive algorithm:
 
 ![runtime](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/Pictures/compare.png)
-
-**Note:** There is a method with even faster runtimes, in one of my other projects: [**cumulative-heatmap-calculation**](https://github.com/EtzionData/cumulative-heatmap-calculation)
 
 The resolution of the heat map can be adjusted using the **"depth"** variable. This variable determines how many splits to make in each of the first squares. The larger the "depth" variable, the higher the resolution we get. You can see a diagram describing the split into squares, by each depth:
 
