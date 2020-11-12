@@ -4,7 +4,7 @@ recursive method for heatmap calculation from given points.
 ## introduction
 Calculating a heat map is a complex task, because since the user selects a more detailed resolution, the runtime of the calculation increases accordingly. The main difficulty in the calculation is in the sum of all the coordinates for the boundaries of each cell in the heat map. To overcome this problem, the code [**smart_heatmap.py**]( https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/smart_heatmap.py) applied **recursive solution**:
 
-**Note:** In one of my other projects, there is a method with even faster runtimes: [**cumulative-heatmap-calculation**](https://github.com/EtzionData/cumulative-heatmap-calculation)
+**Note:** In one of my other projects, there is a method with even faster runtimes! see: [**cumulative-heatmap-calculation**](https://github.com/EtzionData/cumulative-heatmap-calculation)
 
 -	**Step One:** Initialize a small amount of low-resolution square cells.
 -	**Step Two:** For each of the squares we will isolate only the coordinates that within to its boundaries and sum them.
