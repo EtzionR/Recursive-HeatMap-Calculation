@@ -1,7 +1,7 @@
-# recursive-HeatMap-calculation
+# Recursive-HeatMap-Calculation
 recursive method for heatmap calculation from given points.
 
-## introduction
+## Introduction
 Calculating a heat map is a complex task, because since the user selects a more detailed resolution, the runtime of the calculation increases accordingly. The main difficulty in the calculation is in the sum of all the coordinates for the boundaries of each cell in the heat map. To overcome this problem, the code [**smart_heatmap.py**]( https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/smart_heatmap.py) applied **recursive solution**:
 
 **Note:** In one of my other projects, there is a method with even **faster runtime!** see: [**cumulative-heatmap-calculation**](https://github.com/EtzionData/cumulative-heatmap-calculation)
@@ -44,7 +44,7 @@ Also, the data that saved to a KML file gets a color corresponding to the count 
 - **loadcsv**    (this function required also the X & Y fields names)
 
 
-## libraries
+## Libraries
 The code uses the following libraries in Python:
 
 **matplotlib**
@@ -57,14 +57,14 @@ The code uses the following libraries in Python:
 
 **numpy**
 
-## application
+## Application
 An application of the code is attached to this page under the name: 
 
 [**implementation.py**](https://github.com/EtzionData/recursive-HeatMap-calculation/blob/master/implementation.py)
 
 the examples outputs are also attached here.
 
-## example for using the code
+## Example for using the code
 To use this code, you just need to import it as follows:
 ``` sh
 # import
