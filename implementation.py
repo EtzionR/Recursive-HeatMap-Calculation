@@ -1,4 +1,4 @@
-from smart_heatmap import HeatMap, loadshp, loadkml, loadcsv
+from cmh import HeatMap, loadshp, loadkml, loadcsv
 
 
 # example 1
