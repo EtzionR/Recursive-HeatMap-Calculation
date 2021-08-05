@@ -1,3 +1,7 @@
+# Create by Etzion Harari
+# https://github.com/EtzionR
+
+# Load libraries:
 from matplotlib.collections import PatchCollection
 from matplotlib.patches import Polygon
 import matplotlib.pyplot as plt
@@ -258,3 +262,4 @@ def loadcsv(file,x,y):
     return [(x[i], y[i]) for i in range(len(x))]
 
 
+# MIT © Etzion Harari
